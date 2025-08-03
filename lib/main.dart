@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:inter_task/FileHandling.dart';
 import 'package:inter_task/chat_page.dart';
 import 'package:inter_task/pages/LocationMapWeb.dart';
 import 'package:inter_task/pages/PollPage.dart';
 import 'package:inter_task/pages/expense_home_page.dart';
 import 'package:inter_task/pages/home_page.dart';
 import 'package:inter_task/pages/login_page.dart';
+import 'package:inter_task/scanner_web.dart';
 import 'package:inter_task/screens/product_list_page.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,8 +34,9 @@ class MyApp extends StatelessWidget {
         '/votingpoll': (context) => const PollPage(),
         '/votingpolls': (context) => const LoginPage(),
         '/locationtracker': (context) => const LocationSearchMap(),
+        '/filehandling': (context) => FileHandling(),
+        '/qrcode': (context) => const ScannerWebPage(),
       },
     );
   }
 }
-
